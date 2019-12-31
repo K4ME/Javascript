@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Curso Javascript</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" name="nome" class="nome" />
+      <button class="botao">Adcionar</button>
+    </div>
+
+    <script>
+      //busca pelo ID, sempre é único.
+      //var inputElement = document.getElementById("nome");
+
+      //retorna um vetor, pois pode ser vários elementos.
+      //var inputElement = document.getElementsByTagName("input");
+
+      //retorna um vetor, vários elementos com a mesma classe.
+      //var inputElement = document.getElementsByClassName("nome");
+
+      //podemos buscar o que quiser
+      var inputElement = document.querySelector("input[name=nome]");
+      var btnElement = document.querySelector("button.botao");
+
+      btnElement.onclick = function() {
+        var text = inputElement.value;
+        alert(text);
+      };
+    </script>
+  </body>
+</html>
